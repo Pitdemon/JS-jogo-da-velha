@@ -1,0 +1,31 @@
+programa {
+  funcao inicio() {
+    
+    //Jogo da velha 
+
+    caracter posicao[9] = {"_","_","_","_","_","_","_","_","_"}
+    inteiro i, jogada
+    logico = velha = falso
+
+    //Laço de repetição pra imprimir tabuleiro
+
+    enquanto (nao(velha)){
+    para(i=0; i<9; i=i+3){
+      escreva(posicao[i], "|", posicao[i + 1], "|", posicao[i + 2], "\n")
+     }
+
+     //Jogador x Jogo
+     escreva("Jogar X jogar (indique uma posição de 0 a 9):")
+     leia(jogada)
+     posicao[jogada] = "X"
+
+     escreva("Jogar O jogar (indique uma posição de 0 a 9):")
+     leia(jogada)
+     posicao[jogada] = "O"
+
+     //Teste para verificar se deu velha
+
+     velha =falso
+    }
+  }
+}
